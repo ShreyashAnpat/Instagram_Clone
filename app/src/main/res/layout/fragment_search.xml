@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.search">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="18dp"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/back"
+                android:id="@+id/back"/>
+<!--            <EditText-->
+<!--                android:focusable="true"-->
+<!--                android:id="@+id/searchView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:hint="Search Hear"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@drawable/search_background"/>-->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView_1"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:iconifiedByDefault="false"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                android:background="@drawable/search_background"
+               android:layout_margin="10dp"
+                app:queryHint="Search" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#BFBEBE"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lotty">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="500dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_marginTop="100dp"
+                app:lottie_rawRes="@raw/search" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find Your friends...! "
+                android:gravity="center" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list"/>
+
+    </LinearLayout>
+
+</FrameLayout>
